@@ -1,2 +1,2 @@
 # node_examples
-simple demo to use nodejs lib
+## 1. rabbitmq demo
