@@ -17,7 +17,7 @@ async function consume() {
   await channel.assertQueue(delayQueueName, {
     durable: true, deadLetterExchange: timeoutExchangeName,
   });
-  // 生命死信队列
+  // 声明死信队列
   await channel.assertQueue(timeoutQueueName, { durable: true });
   // 绑定关系（队列、交换机、路由键）
   await channel.bindQueue(delayQueueName, delayExchangeName, routingKey);
